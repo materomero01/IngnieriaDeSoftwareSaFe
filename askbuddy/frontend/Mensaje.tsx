@@ -2,16 +2,18 @@
 
 import { Message, Avatar } from "@chatscope/chat-ui-kit-react";
 
+export type MensajeType = {
+  id_mensaje: string;
+  chat_id: string;
+  texto: string;
+  empleado_id: string | null;
+  hora: string;
+  nombre_empleado?: string;
+  avatar_url?: string;
+};
+
 type MensajeProps = {
-  mensaje: {
-    id_mensaje: string;
-    chat_id: string;
-    texto: string;
-    empleado_id: string | null;
-    hora: string;
-    nombre_empleado?: string;
-    avatar_url?: string;
-  };
+  mensaje: MensajeType;
 };
 
 export default function Mensaje({ mensaje }: MensajeProps) {
